@@ -173,7 +173,7 @@ Contributions are welcome! Please fork the repo and submit pull requests.
 
 ## License
 
-MIT License © 2025 Your Name
+MIT License © 2025 Lakshman Kambam
 
 ---
 
@@ -184,12 +184,6 @@ MIT License © 2025 Your Name
 - socket.io - Real-time communication  
 - canvas-confetti - Confetti animations  
 - react-hot-toast - Toast notifications  
-
----
-
-## Contact
-
-For questions or support, contact: your.email@example.com
 
 ---
 
