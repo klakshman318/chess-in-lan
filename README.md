@@ -3,12 +3,7 @@
 # 🎲 Play Chess
 **Local Network Chess Arena**
 
-<p align="center">
-  <video width="640" height="360" controls autoplay muted loop>
-    <source src="play_chess_demo_preview.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
+![Play Chess in LAN Preview](./play_chess_demo_preview.gif)
 
 ---
 
