@@ -53,7 +53,7 @@ export default function HomePage() {
         )}`
       );
     } else {
-      const socket = io("ws://192.168.1.35:3000", { path: "/api/socket" });
+      const socket = io("ws://192.168.31.229:3000", { path: "/api/socket" });
       socket.emit("check-room", { room: roomCode });
       socket.on("room-exists", (exists: boolean) => {
         if (exists) {
@@ -92,21 +92,27 @@ export default function HomePage() {
         <div className="absolute left-1/4 top-1/2 w-96 h-96 bg-[#d4af37]/10 rounded-full blur-3xl animate-pulseGlow pointer-events-none" />
       </div>
 
-      <div className="flex flex-col justify-center items-start w-full md:w-1/2 p-8 md:p-16 z-10 space-y-8">
+      <div className="flex flex-col justify-center items-start w-full md:w-1/1 p-8 md:p-16 z-10 space-y-8">
 
-        <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mb-4 shadow-inner">
-          <Image
-            src="/images/chess_logo.svg"
-            alt="Chess Knight Logo"
-            width={56}
-            height={56}
-            className="opacity-90"
-          />
+        <div className="flex flex-row items-center gap-4 mb-6">
+          <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center shadow-inner">
+            <Image
+              src="/images/chess_logo.svg"
+              alt="Chess Knight Logo"
+              width={56}
+              height={56}
+              className="opacity-90"
+            />
+          </div>
+          <div className="flex flex-col leading-none">
+            <h1 className="text-4xl font-extrabold text-brand drop-shadow-md animate-pulse select-none">
+              Play Chess
+            </h1>
+            <span className="text-lg font-semibold text-white/80 select-none">
+              Local Network Chess Arena
+            </span>
+          </div>
         </div>
-
-        <h1 className="text-4xl md:text-5xl font-extrabold text-brand drop-shadow-md animate-pulse">
-          Play Chess in LAN
-        </h1>
 
         <div className="relative w-full max-w-md flex rounded-full bg-white/10 p-1 shadow-inner backdrop-blur-sm border border-white/20">
           <button
