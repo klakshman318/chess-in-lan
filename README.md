@@ -1,68 +1,67 @@
 ![Play Chess](./public/images/chess_logo.svg)
 
-# Play Chess
-
-Local Network Chess Arena
-
-Replace the following line with your actual Quick Look video URL or local path:
+# 🎲 Play Chess
+**Local Network Chess Arena**
 
 <p align="center">
   <video width="640" height="360" controls autoplay muted loop>
-    <source src="path/to/your-quicklook-video.mp4" type="video/mp4">
+    <source src="play_chess_demo_preview.mov" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
 
 ---
 
-## Overview
+## 🚀 Overview
 
-Play Chess is a real-time multiplayer chess game designed to be played over a local network. It allows players to create or join private rooms, challenge friends, and enjoy classic chess with time controls and a sleek modern interface. The game syncs moves instantly, includes chat-like thinking dialogues, timers, move history, captured pieces display, and end-of-game handling with confetti celebration.
+Play Chess is a **real-time multiplayer chess game** designed for local network play. Create or join private rooms, challenge friends, and enjoy classic chess with:
 
----
-
-## Features
-
-- Create or Join Rooms: Easily create a private room or join an existing one via room code.
-- Real-Time Gameplay: Moves are synced instantly between two players using WebSocket (socket.io).
-- Time Controls: Configurable timer with countdown for both players.
-- Captured Pieces Display: Shows captured pieces for both players.
-- Move History: Track all moves made during the game.
-- Thinking Dialogues: Fun real-time status messages to simulate player thinking.
-- End Game Handling: Detects checkmate, timeouts, and room end events with notifications.
-- Responsive UI: Clean and intuitive interface with animations and sound feedback.
-- LAN Play: Runs locally, designed for LAN usage, no external server dependency needed.
-- Admin Controls: Room creators can restart or end the game.
-- Automatic Redirect: Losers are redirected to the landing page after 15 seconds.
+- Instant move syncing via WebSockets
+- Time controls and countdowns
+- Captured pieces display & move history
+- Fun thinking dialogues and confetti celebration on wins
+- Clean, responsive UI for smooth gameplay
 
 ---
 
-## Technology Stack
+## ✨ Features
 
-- Frontend: React, Next.js 13, TypeScript, Tailwind CSS, react-chessboard
-- Backend: Node.js, Socket.IO, Next.js API routes
-- Real-time Communication: WebSockets using Socket.IO
-- Animations: Canvas Confetti for celebrations
-- Notifications: react-hot-toast for user feedback
+- 🏠 **Create or Join Rooms** — Easy room creation & joining with unique codes  
+- ⚡ **Real-Time Gameplay** — Synchronized moves using WebSocket (socket.io)  
+- ⏱️ **Time Controls** — Configurable timer with countdown per player  
+- ♟️ **Captured Pieces Display** — See which pieces have been captured  
+- 📜 **Move History** — Track all moves made in the game  
+- 💬 **Thinking Dialogues** — Real-time player thinking messages  
+- 🏆 **End Game Handling** — Detects checkmate, timeouts, and room end  
+- 📱 **Responsive UI** — Beautiful, intuitive interface with animations  
+- 🌐 **LAN Play** — Runs locally without external server dependencies  
+- 🛠️ **Admin Controls** — Creators can restart or end games  
+- 🔄 **Automatic Redirect** — Losers are redirected after 15 seconds  
 
 ---
 
-## Installation & Setup
+## 🛠️ Technology Stack
+
+- **Frontend:** React, Next.js 13, TypeScript, Tailwind CSS, react-chessboard  
+- **Backend:** Node.js, Socket.IO, Next.js API routes  
+- **Real-time Communication:** WebSockets with Socket.IO  
+- **Animations:** Canvas Confetti  
+- **Notifications:** react-hot-toast  
+
+---
+
+## ⚙️ Installation & Setup
 
 ### Prerequisites
 
-- Node.js >= 16.x
-- Yarn or npm
-- Local network for LAN play
+- Node.js >= 16.x  
+- Yarn or npm  
+- Local network for LAN play  
 
 ### Clone Repository
 
-Run the following commands in your terminal:
-
 ```bash
 git clone https://github.com/yourusername/chess-in-lan.git
-```
-```bash
 cd chess-in-lan
 ```
 
@@ -72,10 +71,9 @@ Use npm or yarn:
 
 ```bash
 npm install
-```
-or
-
+# or
 yarn install
+```
 
 
 ### Run Development Server
@@ -84,20 +82,9 @@ Start the dev server:
 
 ```bash
 npm run dev
-```
-
-or
-
-```bash
+# or
 yarn dev
 ```
-
-or
-
-```bash
-yarn dev
-```
-
 
 Open http://localhost:3000 in your browser.
 
@@ -131,6 +118,7 @@ Open http://localhost:3000 in your browser.
 
 ## Project Structure
 
+```bash
 - /app
   - /api
     - /room
@@ -145,11 +133,13 @@ Open http://localhost:3000 in your browser.
   - index.tsx                  # Contains thinking dialogues and constants
 - /public
   - /images                    # Assets like chess pieces, background images, logos, etc.
+```
 
 ---
 
 ## WebSocket Events
 
+```bash
 | Event         | Direction       | Payload                          | Description                      |
 | ------------- | --------------- | --------------------------------| ------------------------------- |
 | join          | Client → Server | { room, name, role }             | Join or create a room           |
@@ -162,18 +152,7 @@ Open http://localhost:3000 in your browser.
 | timer-update  | Server → Client| { white, black, active }        | Sync timers                    |
 | check-room    | Client → Server| { room }                       | Validate if room exists         |
 | room-exists   | Server → Client| boolean                        | Response for room validation    |
-
----
-
-## Contributions
-
-Contributions are welcome! Please fork the repo and submit pull requests.
-
----
-
-## License
-
-MIT License © 2025 Lakshman Kambam
+```
 
 ---
 
@@ -188,6 +167,19 @@ MIT License © 2025 Lakshman Kambam
 ---
 
 Enjoy your game! 🏆
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find a bug or have a feature request, open an issue or submit a pull request.
+
+1. Fork the repo
+2. Create a new branch
+3. Commit changes
+4. Push and create a PR
+
+![License](https://img.shields.io/badge/license-MIT-green)
 
 
 
