@@ -22,8 +22,6 @@ Play Chess is a **real-time multiplayer chess game** designed for local network 
 - Fun thinking dialogues and confetti celebration on wins
 - Clean, responsive UI for smooth gameplay
 
----
-
 ## ✨ Features
 
 - 🏠 **Create or Join Rooms** — Easy room creation & joining with unique codes  
@@ -38,8 +36,6 @@ Play Chess is a **real-time multiplayer chess game** designed for local network 
 - 🛠️ **Admin Controls** — Creators can restart or end games  
 - 🔄 **Automatic Redirect** — Losers are redirected after 15 seconds  
 
----
-
 ## 🛠️ Technology Stack
 
 - **Frontend:** React, Next.js 13, TypeScript, Tailwind CSS, react-chessboard  
@@ -47,8 +43,6 @@ Play Chess is a **real-time multiplayer chess game** designed for local network 
 - **Real-time Communication:** WebSockets with Socket.IO  
 - **Animations:** Canvas Confetti  
 - **Notifications:** react-hot-toast  
-
----
 
 ## ⚙️ Installation & Setup
 
@@ -114,9 +108,7 @@ Open http://localhost:3000 in your browser.
    - Losers are redirected to the landing page after 15 seconds.
    - Creators can end rooms anytime, disconnecting players.
 
----
-
-## Project Structure
+## 📁 Project Structure
 
 ```bash
 - /app
@@ -135,26 +127,24 @@ Open http://localhost:3000 in your browser.
   - /images                    # Assets like chess pieces, background images, logos, etc.
 ```
 
----
-
-## WebSocket Events
+## 🔌 WebSocket Events
 
 ```bash
-| Event         | Direction       | Payload                          | Description                      |
-| ------------- | --------------- | --------------------------------| ------------------------------- |
-| join          | Client → Server | { room, name, role }             | Join or create a room           |
-| player-joined | Server → Client | { name }                        | Notify room that a player joined|
-| room-creator  | Server → Client | { name }                        | Send creator's name to joiner   |
-| move          | Client → Server | { room, move }                  | Send chess move                 |
-| opponent-move | Server → Client | { move }                       | Receive opponent's move         |
-| restart       | Client ↔ Server| { room }                       | Restart game                   |
-| end-room      | Client ↔ Server| { room, winner, reason }       | End room with winner and reason |
-| timer-update  | Server → Client| { white, black, active }        | Sync timers                    |
-| check-room    | Client → Server| { room }                       | Validate if room exists         |
-| room-exists   | Server → Client| boolean                        | Response for room validation    |
++---------------+------------------+------------------------------+-------------------------------------+
+| Event         | Direction        | Payload                      | Description                         |
++---------------+------------------+------------------------------+-------------------------------------+
+| join          | Client -> Server | { room, name, role }          | Join or create a room               |
+| player-joined | Server -> Client | { name }                     | Notify room that a player joined    |
+| room-creator  | Server -> Client | { name }                     | Send creator's name to joiner       |
+| move          | Client -> Server | { room, move }               | Send chess move                    |
+| opponent-move | Server -> Client | { move }                    | Receive opponent's move             |
+| restart       | Client <-> Server| { room }                    | Restart game                      |
+| end-room      | Client <-> Server| { room, winner, reason }    | End room with winner and reason    |
+| timer-update  | Server -> Client | { white, black, active }     | Sync timers                       |
+| check-room    | Client -> Server | { room }                    | Validate if room exists             |
+| room-exists   | Server -> Client | boolean                     | Response for room validation        |
++---------------+------------------+------------------------------+-------------------------------------+
 ```
-
----
 
 ## Acknowledgements
 
@@ -164,11 +154,7 @@ Open http://localhost:3000 in your browser.
 - canvas-confetti - Confetti animations  
 - react-hot-toast - Toast notifications  
 
----
-
-Enjoy your game! 🏆
-
----
+### Enjoy your game! 🏆
 
 ## 🤝 Contributing
 
