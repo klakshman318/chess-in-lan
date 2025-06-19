@@ -1,8 +1,8 @@
+![Play Chess](./public/images/chess_logo.svg)
+
 # Play Chess
 
 Local Network Chess Arena
-
-![Play Chess](./public/images/chess_logo.svg)
 
 Replace the following line with your actual Quick Look video URL or local path:
 
