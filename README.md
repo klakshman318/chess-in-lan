@@ -33,7 +33,7 @@ Play Chess is a **real-time multiplayer chess game** designed for local network 
 
 ## 🛠️ Technology Stack
 
-- **Frontend:** React, Next.js 13, TypeScript, Tailwind CSS, react-chessboard  
+- **Frontend:** React, Next.js 15.3.3, TypeScript, Tailwind CSS, react-chessboard  
 - **Backend:** Node.js, Socket.IO, Next.js API routes  
 - **Real-time Communication:** WebSockets with Socket.IO  
 - **Animations:** Canvas Confetti  
@@ -43,7 +43,7 @@ Play Chess is a **real-time multiplayer chess game** designed for local network 
 
 ### Prerequisites
 
-- Node.js >= 16.x  
+- Node.js
 - Yarn or npm  
 - Local network for LAN play  
 
@@ -128,16 +128,16 @@ Open http://localhost:3000 in your browser.
 +---------------+------------------+------------------------------+-------------------------------------+
 | Event         | Direction        | Payload                      | Description                         |
 +---------------+------------------+------------------------------+-------------------------------------+
-| join          | Client -> Server | { room, name, role }          | Join or create a room               |
+| join          | Client -> Server | { room, name, role }         | Join or create a room               |
 | player-joined | Server -> Client | { name }                     | Notify room that a player joined    |
 | room-creator  | Server -> Client | { name }                     | Send creator's name to joiner       |
-| move          | Client -> Server | { room, move }               | Send chess move                    |
-| opponent-move | Server -> Client | { move }                    | Receive opponent's move             |
-| restart       | Client <-> Server| { room }                    | Restart game                      |
-| end-room      | Client <-> Server| { room, winner, reason }    | End room with winner and reason    |
-| timer-update  | Server -> Client | { white, black, active }     | Sync timers                       |
-| check-room    | Client -> Server | { room }                    | Validate if room exists             |
-| room-exists   | Server -> Client | boolean                     | Response for room validation        |
+| move          | Client -> Server | { room, move }               | Send chess move                     |
+| opponent-move | Server -> Client | { move }                     | Receive opponent's move             |
+| restart       | Client <-> Server| { room }                     | Restart game                        |
+| end-room      | Client <-> Server| { room, winner, reason }     | End room with winner and reason     |
+| timer-update  | Server -> Client | { white, black, active }     | Sync timers                         |
+| check-room    | Client -> Server | { room }                     | Validate if room exists             |
+| room-exists   | Server -> Client | boolean                      | Response for room validation        |
 +---------------+------------------+------------------------------+-------------------------------------+
 ```
 
